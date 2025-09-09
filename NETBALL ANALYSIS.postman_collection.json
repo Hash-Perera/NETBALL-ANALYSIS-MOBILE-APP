@@ -1,0 +1,1403 @@
+{
+	"info": {
+		"_postman_id": "b00b4bff-9641-4966-a54e-d7d621cfb44c",
+		"name": "NETBALL ANALYSIS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33157688"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fullName\":\"Sudarika Chechani\",\r\n  \"email\": \"sudarika@gmail.com\",\r\n  \"password\": \"sudarika\",\r\n  \"profileType\":\"Player\",\r\n  \"selectedCoach\":\"67b472966dd72a16549b4040\" // No need this row for register coach\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"avishka@gmail.com\",\r\n  \"password\": \"avishka\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjQ3MmYzNmRkNzJhMTY1NDliNDA0NyIsInByb2ZpbGVUeXBlIjoiUGxheWVyIiwiaWF0IjoxNzQwMDQzOTQ5LCJleHAiOjE3NDA2NDg3NDl9.4ycTujN8Ku5G9ouE_mB0hWYDoTuABM80KWfP0lGF1Gk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"sahanup@gmail.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjQ3MmYzNmRkNzJhMTY1NDliNDA0NyIsInByb2ZpbGVUeXBlIjoiUGxheWVyIiwiaWF0IjoxNzQwMDQzOTQ5LCJleHAiOjE3NDA2NDg3NDl9.4ycTujN8Ku5G9ouE_mB0hWYDoTuABM80KWfP0lGF1Gk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Details",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjQ3Mjk2NmRkNzJhMTY1NDliNDA0MCIsInByb2ZpbGVUeXBlIjoiQ29hY2giLCJpYXQiOjE3NDAwNDQ0NDIsImV4cCI6MTc0MDY0OTI0Mn0.thRGrpYtXOYVdUX9G5jSfo0JvXBvV7HhZPqHgOXERjE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Coaches",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/coaches",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"coaches"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Players Under Coach",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjQ3Mjk2NmRkNzJhMTY1NDliNDA0MCIsInByb2ZpbGVUeXBlIjoiQ29hY2giLCJpYXQiOjE3NDAwNDQ0NDIsImV4cCI6MTc0MDY0OTI0Mn0.thRGrpYtXOYVdUX9G5jSfo0JvXBvV7HhZPqHgOXERjE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/players",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"players"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ball Handling",
+			"item": [
+				{
+					"name": "Upload Videos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDU3ZDg2MGRjMzMxNWViYjJkMTIwOCIsInByb2ZpbGVUeXBlIjoiUGxheWVyIiwiaWF0IjoxNzQyMDQ0NTYyLCJleHAiOjE3NDI2NDkzNjJ9.M8bOKJyrgyUFEdKwBZBAgu-NTeBstUXIW70J5MqjBGg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ball_handling_correct",
+									"type": "file",
+									"src": "/C:/Users/avish/Downloads/Video/IMG_7702.mov"
+								},
+								{
+									"key": "ball_handling_wrong",
+									"type": "file",
+									"src": "/C:/Users/avish/Downloads/Video/IMG_7698.MOV"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/ballhandling/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"ballhandling",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Analyze Videos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDU3ZDg2MGRjMzMxNWViYjJkMTIwOCIsInByb2ZpbGVUeXBlIjoiUGxheWVyIiwiaWF0IjoxNzQyMDQ0NTYyLCJleHAiOjE3NDI2NDkzNjJ9.M8bOKJyrgyUFEdKwBZBAgu-NTeBstUXIW70J5MqjBGg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://45.134.226.131:6000/api/ballhandling/analyze/67d57e170dc3315ebb2d120d",
+							"protocol": "http",
+							"host": [
+								"45",
+								"134",
+								"226",
+								"131"
+							],
+							"port": "6000",
+							"path": [
+								"api",
+								"ballhandling",
+								"analyze",
+								"67d57e170dc3315ebb2d120d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Top Players",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjQ3Mjk2NmRkNzJhMTY1NDliNDA0MCIsInByb2ZpbGVUeXBlIjoiQ29hY2giLCJpYXQiOjE3NDE3NjcwNjcsImV4cCI6MTc0MjM3MTg2N30.aq9PHm8M-P90QHv3g0qO-rxdhIzH7B05delRSyGQrPk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"count\": 3\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/ballhandling/top-players",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"ballhandling",
+								"top-players"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users All Record",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjZmNzYyNjUwNDdjYTdiYjM3M2JkMyIsInByb2ZpbGVUeXBlIjoiUGxheWVyIiwiaWF0IjoxNzQwNTAzNTEzLCJleHAiOjE3NDExMDgzMTN9.uHpR4hNrWwmdRiKAKiTybRzhn__DoGWcVyIDKqSjSKw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/ballhandling/videos/67b6f76265047ca7bb373bd3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"ballhandling",
+								"videos",
+								"67b6f76265047ca7bb373bd3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Matching Percentage",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjZmNzYyNjUwNDdjYTdiYjM3M2JkMyIsInByb2ZpbGVUeXBlIjoiUGxheWVyIiwiaWF0IjoxNzQxNDkwOTUzLCJleHAiOjE3NDIwOTU3NTN9.OqmAXQc4eNMgrqK7d8yYicaKR1sWVr0AAX83nO_bps8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/ballhandling/matching/67b6f76265047ca7bb373bd3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"ballhandling",
+								"matching",
+								"67b6f76265047ca7bb373bd3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Suggestion Video",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjZmNzYyNjUwNDdjYTdiYjM3M2JkMyIsInByb2ZpbGVUeXBlIjoiUGxheWVyIiwiaWF0IjoxNzQwNTAzNTEzLCJleHAiOjE3NDExMDgzMTN9.uHpR4hNrWwmdRiKAKiTybRzhn__DoGWcVyIDKqSjSKw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/ballhandling/suggestions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"ballhandling",
+								"suggestions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Record",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjZmNzYyNjUwNDdjYTdiYjM3M2JkMyIsInByb2ZpbGVUeXBlIjoiUGxheWVyIiwiaWF0IjoxNzQwNTAzNTEzLCJleHAiOjE3NDExMDgzMTN9.uHpR4hNrWwmdRiKAKiTybRzhn__DoGWcVyIDKqSjSKw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/ballhandling/delete/67be0d1cc52c29b3aa04b944",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"ballhandling",
+								"delete",
+								"67be0d1cc52c29b3aa04b944"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Attack Analysis",
+			"item": [
+				{
+					"name": "Upload Videos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjZmNzYyNjUwNDdjYTdiYjM3M2JkMyIsInByb2ZpbGVUeXBlIjoiUGxheWVyIiwiaWF0IjoxNzQxNDkwOTUzLCJleHAiOjE3NDIwOTU3NTN9.OqmAXQc4eNMgrqK7d8yYicaKR1sWVr0AAX83nO_bps8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "attack_analysis_correct",
+									"type": "file",
+									"src": "/C:/Users/avish/Downloads/Video/VID-20241130-WA0035.mp4"
+								},
+								{
+									"key": "attack_analysis_wrong",
+									"type": "file",
+									"src": "/C:/Users/avish/Downloads/Video/VID-20241130-WA0034.mp4"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/attackanalysis/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"attackanalysis",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Analyze Videos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjZmNzYyNjUwNDdjYTdiYjM3M2JkMyIsInByb2ZpbGVUeXBlIjoiUGxheWVyIiwiaWF0IjoxNzQxNDkwOTUzLCJleHAiOjE3NDIwOTU3NTN9.OqmAXQc4eNMgrqK7d8yYicaKR1sWVr0AAX83nO_bps8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/attackanalysis/analyze/67cd0b3be90fd3ab7b9351b3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"attackanalysis",
+								"analyze",
+								"67cd0b3be90fd3ab7b9351b3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Top Players",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjQ3Mjk2NmRkNzJhMTY1NDliNDA0MCIsInByb2ZpbGVUeXBlIjoiQ29hY2giLCJpYXQiOjE3NDE3NjcwNjcsImV4cCI6MTc0MjM3MTg2N30.aq9PHm8M-P90QHv3g0qO-rxdhIzH7B05delRSyGQrPk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"count\": 3\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/attackanalysis/top-players",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"attackanalysis",
+								"top-players"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users All Record",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjZmNzYyNjUwNDdjYTdiYjM3M2JkMyIsInByb2ZpbGVUeXBlIjoiUGxheWVyIiwiaWF0IjoxNzQxNDkwOTUzLCJleHAiOjE3NDIwOTU3NTN9.OqmAXQc4eNMgrqK7d8yYicaKR1sWVr0AAX83nO_bps8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/attackanalysis/videos/67b6f76265047ca7bb373bd3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"attackanalysis",
+								"videos",
+								"67b6f76265047ca7bb373bd3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Matching Percentage",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjZmNzYyNjUwNDdjYTdiYjM3M2JkMyIsInByb2ZpbGVUeXBlIjoiUGxheWVyIiwiaWF0IjoxNzQxNDkwOTUzLCJleHAiOjE3NDIwOTU3NTN9.OqmAXQc4eNMgrqK7d8yYicaKR1sWVr0AAX83nO_bps8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/attackanalysis/matching/67b6f76265047ca7bb373bd3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"attackanalysis",
+								"matching",
+								"67b6f76265047ca7bb373bd3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Record",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjZmNzYyNjUwNDdjYTdiYjM3M2JkMyIsInByb2ZpbGVUeXBlIjoiUGxheWVyIiwiaWF0IjoxNzQwNTAzNTEzLCJleHAiOjE3NDExMDgzMTN9.uHpR4hNrWwmdRiKAKiTybRzhn__DoGWcVyIDKqSjSKw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/attackanalysis/delete/67be1580bc3811ff5f04c383",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"attackanalysis",
+								"delete",
+								"67be1580bc3811ff5f04c383"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Suggestion Video",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjZmNzYyNjUwNDdjYTdiYjM3M2JkMyIsInByb2ZpbGVUeXBlIjoiUGxheWVyIiwiaWF0IjoxNzQwNTQxNTY1LCJleHAiOjE3NDExNDYzNjV9.YTln_NjrSazU3J7TrCzYxolUzCz-3D32LWWIlGvocqk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/attackanalysis/suggestions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"attackanalysis",
+								"suggestions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Defence Analysis",
+			"item": [
+				{
+					"name": "Upload Videos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjZmNzYyNjUwNDdjYTdiYjM3M2JkMyIsInByb2ZpbGVUeXBlIjoiUGxheWVyIiwiaWF0IjoxNzQxNDkwOTUzLCJleHAiOjE3NDIwOTU3NTN9.OqmAXQc4eNMgrqK7d8yYicaKR1sWVr0AAX83nO_bps8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "defence_analysis_correct",
+									"type": "file",
+									"src": "/C:/Users/avish/Downloads/Video/VID-20241130-WA0035.mp4"
+								},
+								{
+									"key": "defence_analysis_wrong",
+									"type": "file",
+									"src": "/C:/Users/avish/Downloads/Video/VID-20241130-WA0034.mp4"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/defenceanalysis/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"defenceanalysis",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Analyze Videos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjZmNzYyNjUwNDdjYTdiYjM3M2JkMyIsInByb2ZpbGVUeXBlIjoiUGxheWVyIiwiaWF0IjoxNzQxNDkwOTUzLCJleHAiOjE3NDIwOTU3NTN9.OqmAXQc4eNMgrqK7d8yYicaKR1sWVr0AAX83nO_bps8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/defenceanalysis/analyze/67be1acc1171f24537d2991c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"defenceanalysis",
+								"analyze",
+								"67be1acc1171f24537d2991c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Top Players",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjQ3Mjk2NmRkNzJhMTY1NDliNDA0MCIsInByb2ZpbGVUeXBlIjoiQ29hY2giLCJpYXQiOjE3NDA1MTM4NTQsImV4cCI6MTc0MTExODY1NH0.gDTj9crhsMae9ShpRLRtyoNMLY-krK3qFpEw1gxtkwc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"count\": 3\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/defenceanalysis/top-players",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"defenceanalysis",
+								"top-players"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users All Record",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjZmNzYyNjUwNDdjYTdiYjM3M2JkMyIsInByb2ZpbGVUeXBlIjoiUGxheWVyIiwiaWF0IjoxNzQxNDkwOTUzLCJleHAiOjE3NDIwOTU3NTN9.OqmAXQc4eNMgrqK7d8yYicaKR1sWVr0AAX83nO_bps8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/defenceanalysis/videos/67b6f76265047ca7bb373bd3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"defenceanalysis",
+								"videos",
+								"67b6f76265047ca7bb373bd3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Matching Percentage",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjZmNzYyNjUwNDdjYTdiYjM3M2JkMyIsInByb2ZpbGVUeXBlIjoiUGxheWVyIiwiaWF0IjoxNzQxNDkwOTUzLCJleHAiOjE3NDIwOTU3NTN9.OqmAXQc4eNMgrqK7d8yYicaKR1sWVr0AAX83nO_bps8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/defenceanalysis/matching/67b6f76265047ca7bb373bd3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"defenceanalysis",
+								"matching",
+								"67b6f76265047ca7bb373bd3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Suggestion Video",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjZmNzYyNjUwNDdjYTdiYjM3M2JkMyIsInByb2ZpbGVUeXBlIjoiUGxheWVyIiwiaWF0IjoxNzQwNTAzNTEzLCJleHAiOjE3NDExMDgzMTN9.uHpR4hNrWwmdRiKAKiTybRzhn__DoGWcVyIDKqSjSKw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/defenceanalysis/suggestions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"defenceanalysis",
+								"suggestions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Record",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjZmNzYyNjUwNDdjYTdiYjM3M2JkMyIsInByb2ZpbGVUeXBlIjoiUGxheWVyIiwiaWF0IjoxNzQwNTAzNTEzLCJleHAiOjE3NDExMDgzMTN9.uHpR4hNrWwmdRiKAKiTybRzhn__DoGWcVyIDKqSjSKw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/defenceanalysis/delete/67be1b9b1171f24537d2991f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"defenceanalysis",
+								"delete",
+								"67be1b9b1171f24537d2991f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Injury Detection",
+			"item": [
+				{
+					"name": "Injury Detection",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjZmNzYyNjUwNDdjYTdiYjM3M2JkMyIsInByb2ZpbGVUeXBlIjoiUGxheWVyIiwiaWF0IjoxNzQxMjgxMjk3LCJleHAiOjE3NDE4ODYwOTd9.DRW_3OW0pYAiHe0uIiyNGMXKcpKWiTVPkkrE2E_O7ps",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "injury_image",
+									"type": "file",
+									"src": "/C:/Users/avish/Downloads/Research Project Sample Data/istockphoto-176230806-612x612.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/injury/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"injury",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Injury History",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjZmNzYyNjUwNDdjYTdiYjM3M2JkMyIsInByb2ZpbGVUeXBlIjoiUGxheWVyIiwiaWF0IjoxNzQxMjgxMjk3LCJleHAiOjE3NDE4ODYwOTd9.DRW_3OW0pYAiHe0uIiyNGMXKcpKWiTVPkkrE2E_O7ps",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/injury/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"injury",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Injury",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjZmNzYyNjUwNDdjYTdiYjM3M2JkMyIsInByb2ZpbGVUeXBlIjoiUGxheWVyIiwiaWF0IjoxNzQxMjgxMjk3LCJleHAiOjE3NDE4ODYwOTd9.DRW_3OW0pYAiHe0uIiyNGMXKcpKWiTVPkkrE2E_O7ps",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/injury/67c9d81c0acdd44b5e8b18c5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"injury",
+								"67c9d81c0acdd44b5e8b18c5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Record",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjZmNzYyNjUwNDdjYTdiYjM3M2JkMyIsInByb2ZpbGVUeXBlIjoiUGxheWVyIiwiaWF0IjoxNzQxMjgxMjk3LCJleHAiOjE3NDE4ODYwOTd9.DRW_3OW0pYAiHe0uIiyNGMXKcpKWiTVPkkrE2E_O7ps",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/injury/67c9d81c0acdd44b5e8b18c5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"injury",
+								"67c9d81c0acdd44b5e8b18c5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "http://localhost:5000/api\n",
+			"value": "base",
+			"type": "string"
+		}
+	]
+}

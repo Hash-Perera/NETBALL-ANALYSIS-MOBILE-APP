@@ -1,0 +1,10 @@
+mediapipe==0.10.20
+moviepy==1.0.3
+opencv-python==4.10.0.84
+opencv-python-headless==4.10.0.84
+fastapi==0.115.5
+uvicorn 
+python-multipart 
+boto3==1.35.97
+tensorflow==2.18.0
+pillow==11.1.0
