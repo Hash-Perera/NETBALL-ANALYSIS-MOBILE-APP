@@ -23,3 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+netball_injury_model_2.keras
+netball_injury_model.keras
